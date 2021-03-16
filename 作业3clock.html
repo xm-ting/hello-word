@@ -11,21 +11,21 @@ function draw()
     var c = document.getElementById("myCanvas"); 
     var cxt = c.getContext("2d"); 
     cxt.beginPath(); 
-    cxt.arc(200, 150, 5, 0, 2 * Math.PI, true); //»æÖÆ±íÅÌÖÐÐÄ
+    cxt.arc(200, 150, 5, 0, 2 * Math.PI, true); //ç»˜åˆ¶è¡¨ç›˜ä¸­å¿ƒ
     cxt.fill(); 
     cxt.closePath(); 
    
     cxt.beginPath(); 
-    cxt.arc(200, 150, 100, 0, 2 * Math.PI, true); //»æÖÆ±íÅÌÍâÎ§
+    cxt.arc(200, 150, 100, 0, 2 * Math.PI, true); //ç»˜åˆ¶è¡¨ç›˜å¤–å›´
     cxt.strokeStyle="red"; 
 	cxt.stroke(); 
     cxt.closePath(); 
    
     cxt.beginPath(); 
-    cxt.translate(200, 150); //Æ½ÒÆÔ­µã£» 
+    cxt.translate(200, 150); //å¹³ç§»åŽŸç‚¹ï¼› 
     cxt.rotate(-Math.PI / 2); 
     cxt.save();        
-    for (var i = 0; i < 60; i++) //Ðé»Ã»æÖÆ¾ØÐÎ¿Ì¶ÈÏß
+    for (var i = 0; i < 60; i++) //è™šå¹»ç»˜åˆ¶çŸ©å½¢åˆ»åº¦çº¿
 	{ 
   	  if (i % 5 == 0) 
 	  { 
@@ -35,10 +35,10 @@ function draw()
 	  { 
       	  cxt.fillRect(90, 0, 10, 2); 
       } 
-      cxt.rotate(Math.PI / 30); //Ã¿»æÖÆÒ»¸ö¿Ì¶ÈÏßÐý×ªÒ»´Î
+      cxt.rotate(Math.PI / 30); //æ¯ç»˜åˆ¶ä¸€ä¸ªåˆ»åº¦çº¿æ—‹è½¬ä¸€æ¬¡
 	} 
     cxt.closePath(); 
-	setInterval("Refresh();", 10); //Ã¿1ÃëÖÓµ÷ÓÃrefresh·½·¨Ë¢ÐÂÊ±Õë£¬·ÖÕë£¬ÃëÕëÎ»ÖÃ
+	setInterval("Refresh();", 1000); //æ¯1ç§’é’Ÿè°ƒç”¨refreshæ–¹æ³•åˆ·æ–°æ—¶é’ˆï¼Œåˆ†é’ˆï¼Œç§’é’ˆä½ç½®
 }
 function Refresh()
 {
@@ -47,43 +47,43 @@ function Refresh()
 	cxt.restore(); 
 	cxt.save(); 
 	cxt.rotate(ls * Math.PI / 30); 
-	cxt.clearRect(5, -1, slen+1, 4); //Çå³ýÃëÕëÉÏ´ÎÏÔÊ¾ÄÚÈÝ
+	cxt.clearRect(5, -1, slen+1, 4); //æ¸…é™¤ç§’é’ˆä¸Šæ¬¡æ˜¾ç¤ºå†…å®¹
 	cxt.restore(); 
 	cxt.save(); 
 
 	cxt.rotate(lm * Math.PI / 30); 
-	cxt.clearRect(5, -1, mlen+1, 5); //Çå³ý·ÖÕëÉÏ´ÎÏÔÊ¾ÄÚÈÝ
+	cxt.clearRect(5, -1, mlen+1, 5); //æ¸…é™¤åˆ†é’ˆä¸Šæ¬¡æ˜¾ç¤ºå†…å®¹
 	cxt.restore(); 
 	cxt.save(); 
 
 	cxt.rotate(lh * Math.PI / 6); 
-	cxt.clearRect(5, -3, hlen+1, 6); //Çå³ýÊ±ÕëÉÏ´ÎÏÔÊ¾ÄÚÈÝ
+	cxt.clearRect(5, -3, hlen+1, 6); //æ¸…é™¤æ—¶é’ˆä¸Šæ¬¡æ˜¾ç¤ºå†…å®¹
 	var time = new Date(); 
-	var s = ls=time.getSeconds(); //»ñÈ¡µ±Ç°Ê±¼ä£¨ÃëÖÓ£©
-	var m = lm=time.getMinutes(); //»ñÈ¡µ±Ç°Ê±¼ä£¨·ÖÖÓ£©
-	var h = lh=time.getHours();	 //»ñÈ¡µ±Ç°Ê±¼ä£¨Ð¡Ê±£©
+	var s = ls=time.getSeconds(); //èŽ·å–å½“å‰æ—¶é—´ï¼ˆç§’é’Ÿï¼‰
+	var m = lm=time.getMinutes(); //èŽ·å–å½“å‰æ—¶é—´ï¼ˆåˆ†é’Ÿï¼‰
+	var h = lh=time.getHours();	 //èŽ·å–å½“å‰æ—¶é—´ï¼ˆå°æ—¶ï¼‰
 	cxt.restore(); 
 	cxt.save(); 
-	cxt.rotate(s * Math.PI / 30); //¸ù¾ÝÃëÖÓÊýÉèÖÃÃëÕëÎ»ÖÃ
-	cxt.fillRect(5, 0, slen, 2); //ÖØÐÂ»æÖÆÃëÕë
+	cxt.rotate(s * Math.PI / 30); //æ ¹æ®ç§’é’Ÿæ•°è®¾ç½®ç§’é’ˆä½ç½®
+	cxt.fillRect(5, 0, slen, 2); //é‡æ–°ç»˜åˆ¶ç§’é’ˆ
 	cxt.restore(); 
 	cxt.save(); 
-	cxt.rotate((s/60+m) * Math.PI / 30); //¸ù¾Ýµ±Ç°·ÖÖÓÊýÉèÖÃ·ÖÕëÎ»ÖÃ 
-	cxt.fillRect(5, 0, mlen, 3); //ÖØÐÂ»æÖÆ·ÖÕë
+	cxt.rotate((s/60+m) * Math.PI / 30); //æ ¹æ®å½“å‰åˆ†é’Ÿæ•°è®¾ç½®åˆ†é’ˆä½ç½® 
+	cxt.fillRect(5, 0, mlen, 3); //é‡æ–°ç»˜åˆ¶åˆ†é’ˆ
 	cxt.restore(); 
 	cxt.save(); 
-	cxt.rotate((m/60+h )* Math.PI / 6); //¸ù¾Ýµ±Ç°Ð¡Ê±ÊýÉèÖÃÊ±ÕëÎ»ÖÃ 
-	cxt.fillRect(5, -2, hlen, 4); //ÖØÐÂ»æÖÆÊ±Õë
+	cxt.rotate((m/60+h )* Math.PI / 6); //æ ¹æ®å½“å‰å°æ—¶æ•°è®¾ç½®æ—¶é’ˆä½ç½® 
+	cxt.fillRect(5, -2, hlen, 4); //é‡æ–°ç»˜åˆ¶æ—¶é’ˆ
 	
 }	
 
 </script>
 <body> 
 <fieldset>
-	<legend>»æÖÆÊ±ÖÓ</legend>
+	<legend>ç»˜åˆ¶æ—¶é’Ÿ</legend>
     <canvas id="myCanvas" width="400" height="300"></canvas> 
 	<br>
-	<button onClick="draw()">»æÍ¼</button> 
+	<button onClick="draw()">ç»˜å›¾</button> 
 </fieldset>
 </body> 
 </html>
