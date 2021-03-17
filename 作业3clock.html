@@ -37,7 +37,8 @@ function draw()
       } 
       cxt.rotate(Math.PI / 30); //每绘制一个刻度线旋转一次
 	} 
-    cxt.closePath(); 
+    cxt.closePath();
+	Refresh();
 	setInterval("Refresh();", 1000); //每1秒钟调用refresh方法刷新时针，分针，秒针位置
 }
 function Refresh()
