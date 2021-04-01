@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+h1{
+  text-shadow: 2px 2px 5px red;
+}
+
+p {
+  text-shadow: 2px 2px 5px lightblue;
+}
+
+.center {
+  text-align: center;
+}
+
+div.static {
+  position: static;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+img {
+  float: left;
+}
+
+#example1 {
+  border-radius: 35px;
+  width: 300px;
+  background-image: url(/i/photo/flower.gif), url(/i/paper.jpg);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 65px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="center">
+  <h1>ÍøÒ³×÷Òµ</h1>
+</div>
+
+<div class="static">
+  <p>ÓµÓÐ±³¾°Í¼Æ¬µÄÔ²½Ç£º</p>
+</div>
+
+<div id="example1"><p>Rounded corners!</p></div>
+
+<img src="/i/photo/flower-4.jpg" alt="Flower" width="170" height="170">
+
+</body>
+</html>
